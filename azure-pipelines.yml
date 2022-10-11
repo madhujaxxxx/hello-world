@@ -10,15 +10,16 @@ trigger:
 pool:
   name: visual
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
