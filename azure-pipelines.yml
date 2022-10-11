@@ -9,7 +9,9 @@ trigger:
 
 pool:
   name: self
-  demands:special software
+  demands: msbuild
+    visualstudio
+  
 
 
 variables:
